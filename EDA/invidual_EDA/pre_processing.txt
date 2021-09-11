@@ -1,4 +1,23 @@
+# change column name
 order = order.rename(columns = {"OrderID (PK)": "oderID", "Transaction Date" : "transaction_date","UserID (FK)" : "userID", "Bill Type": "bill_type", "Total Amount": "total_amount" })
 clustering = clutering.rename(columns = {"User_ID (FK)": "userID", "Type_user": "type_user", "MainCluster_ID" : "main_cluseringID", "MainCluster_Description" : "main_clustering_description"})
 listening = listening.rename(columns = {"PlaylistID (PK)": "playlistID", "Playlist Name":"playlist_name", "Category":"cat", "Sub Category" :"sub_cat", "Playlist Type" :"palylist_type","Playlist Duration (min)": "playlist_duration","Actual Duration (min)":"actual_duation","UserID (FK)":"userID", "Listening Time":"listening_time", "Listening Date" :"listening_date", "Listening Datetime":"listening_datetime"})
 user = user.rename(columns = {"UserID (PK)":"userID", "VIP hay Free":"user_type", "Gender":"gender", "Year of Birth":"year_of_birth","Age Range": "age_range", "Age":"age", "Region": "region","Operation Systems":"operation_system","Registration Date":"registration_date", "Total Listerning":"total_listening", "Total Listening Time (Min)":"total_listening_time",   })
+
+# change date time
+# xu li datetime
+order.transaction_date = pd.to_datetime(order['transaction_date'], format='%Y-%m-%d')
+user.registration_date = pd.to_datetime(user['registration_date'], format='%Y-%m-%d')
+listening.listening_datetime = pd.to_datetime(listening['listening_datetime'], format='%Y-%m-%d')
+
+# change date by weekly
+def adding_by_week(df, date_field):
+    # df["by_week"] = df[[date_field]].copy()
+    # df.resample('W-Mon', on=date_field).sum().reset_index().sort_values(by=date_field)
+    # order1.resample('W-Mon', on='transaction_date').sum().reset_index().sort_values(by='transaction_date')
+    df['by_week'] = df.apply(lambda row: row[date_field] - dt.timedelta(days=row[date_field].weekday()), axis=1)
+    df = df['by_week'].groupby(df['by_week']).count()
+
+adding_by_week(order, "transaction_date")
+adding_by_week(user, "registration_date")
+adding_by_week(listening, "listening_datetime")
