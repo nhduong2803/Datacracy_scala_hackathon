@@ -1,0 +1,11 @@
+﻿STT,Usecase,Cách làm,Priority,Độ phức tạp,Tác dụng
+1,Tôi muốn có một cơ chế gợi ý cho người đọc về tựa sách tiếp theo mà xác suất người đó sẽ đọc tiếp ở mức cao,Ứng dụng basket market để tìm ra các tựa sách có thể đi chung với nhau,4,Medium,Thấp
+2,"Tôi muốn hiểu được insight từ việc người nghe có xu hướng nghe những thể loại sách cụ thể nào trong ngày, từ đó tôi có thể thay đổi thông tin trên banner để kích thích người dùng dùng ứng dụng trong những khoảng thời gian nhất định trong ngày.","Dựa trên các yếu tố về:
+- Tổng thời gian nghe
+- Tổng thời gian trung bình trên mỗi lượt nghe
+- Tổng lượt nghe",1,Low,Tăng tính engagement
+3,Tôi muốn lập danh sách các category và sub_category phổ biết để gợi ý cho người đọc.,"Dựa trên các yếu tố về:
+- Tổng thời gian nghe
+- Tổng thời gian trung bình trên mỗi lượt nghe
+- Tổng lượt nghe",2,Low,Tăng tính engagement
+4,"Tôi muốn so sánh sự giống nhau giữa các user có những loại sách từng đọc khác nhau, từ đó khi hệ thống gợi ý khách hàng, khả năng user sẽ đọc tựa sách gợi ý sẽ cao",Sử dụng cosine similarity để so sánh các tựa sách,3,Medium,Tăng tính engagement
