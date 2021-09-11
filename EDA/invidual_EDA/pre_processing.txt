@@ -21,3 +21,35 @@ def adding_by_week(df, date_field):
 adding_by_week(order, "transaction_date")
 adding_by_week(user, "registration_date")
 adding_by_week(listening, "listening_datetime")
+
+
+## fillna for the user Table
+
+user.operation_system = user.operation_system.fillna('none')
+user["gender"] = user.gender.replace("no information","none")
+user["gender"] = user.gender.replace("other","none")
+
+## add some features related to time of the listening Table
+
+listening['hour_listening'] = listening.listening_datetime.dt.hour
+listening['dayofweek'] = listening['listening_datetime'].dt.dayofweek
+
+listening["timepoint_of_the_day"] = listening.hour_listening.apply(lambda x : 
+                                                             "late night" if x < 4 else
+                                                             "early morning" if x < 7 else
+                                                             "morning" if x < 11 else
+                                                             "early afternoon" if x < 16 else
+                                                             "afternoon" if x < 18 else
+                                                             "evening"
+                                                            )
+
+listening['dayofweek'] =listening.dayofweek.apply(lambda x :  "Mon" if x == 0 else
+                                                             "Tue" if x ==1 else
+                                                             "Wed" if x ==2 else
+                                                             "Thu" if x == 3 else
+                                                             "Fri" if x == 4 else
+                                                             "Sat" if x == 5 else
+                                                             "Sun" 
+                                                            )
+
+listening['Workingday'] = listening["dayofweek"].apply(lambda x : 0 if x == 'Sun' or x == 'Sat' else 1)
