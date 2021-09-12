@@ -16,43 +16,108 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
 
 
-# data=pd.read_csv("data.csv", sep = ";")
+cat_recommned=pd.read_csv(r"/home/quannt/Documents/GitHub/Datacracy_scala_hackathon/data/cat_recommned.csv")
+cat_recommned.by_week = pd.to_datetime(cat_recommned['by_week'], format='%Y-%m-%d')
+cat_recommned['week'] = cat_recommned.by_week.dt.week
+cat_recommned['month'] = cat_recommned.by_week.dt.month
 def main():
     
     st.title("Title name")
     
     htk=  """
     <div style="background-color:#004d99;padding:0px">
-    <h2 style="color:white;text-align:center;">CUSTOMER DESPOIT PREDICTION APP </h2>
+    <h2 style="color:white;text-align:center;">Những cuốn sách có lượt đọc cao trong 7 ngày </h2>
     </div>
     """
     st.markdown(htk,unsafe_allow_html=True)
 
 ### demo add variables
-    st.sidebar.header("Model name")   
+    #st.sidebar.header("Book Category")
 
     # scale varible
-    age=st.slider("Enter age of the customer",18,95)
-    age=int(age)
-    age=int(scaler.fit_transform([[age]]))
+    book_cat = st.selectbox('Book Category ', ('Sách nói', 'Sách tóm tắt', 'Truyện nói', 'Podcast', 'Thiếu nhi'))
+
 
     # caterigorical variable
     # job=st.selectbox("Enter the type of job customer do",( <field note> ))
     # job=int(encoder.fit_transform([[job]]))
 
     #require variable
-    duration=st.text_input("Enter last contact duration with the customer in sec?",0,4918)
-    if not duration:
-        st.warning("Enter Duration Period")  
-    else:
-        if duration.isalpha() and duration.isalnum():
-            st.warning("Please enter an integer number")
-            pass
-        else:
-            duration=int(duration)
-            if duration>4918 or duration<0:
-                st.warning("Please enter an number between 0 & 4918")
-            duration=int(scaler.fit_transform([[duration]]))
+    if book_cat  == 'Sách nói':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)]\
+            .sort_values(by = ['avg_actual','actual_duation','playlistID','playlist_name'], ascending = False)\
+
+        week = week.groupby(['cat','sub_cat','playlist_name']).agg({
+            'avg_actual':'sum',
+            'actual_duation': 'sum',
+            'playlistID': 'sum'
+        }).reset_index().sort_values(by = ['avg_actual','actual_duation','playlistID'], ascending = False)
+
+        st.dataframe(week[['cat','sub_cat','playlist_name']].head(10))
+
+    elif book_cat == 'Sách tóm tắt':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    elif book_cat == 'Truyện nói':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    elif book_cat == 'Podcast':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    else :
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
 
     #fix variable
 
