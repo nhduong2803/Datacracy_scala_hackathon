@@ -150,16 +150,16 @@ def main():
 
     
     # st.write(case_study)
-    st.image('Datacracy_scala_hackathon/image/case_study.png')
+    st.image('image/case_study.png')
     # st.markdown(overview_2, True)
-    fig_1 = px.bar(listening_group, x="", y="sub_cat", color = "timepoint_of_the_day", title="Long-Form Input")
-    st.plotly_chart(fig_1)
+    # fig_1 = px.bar(listening_group, x="", y="sub_cat", color = "timepoint_of_the_day", title="Long-Form Input")
+    # st.plotly_chart(fig_1)
 
-    fig_2 = px.pie(listening_group, values='actual_duation', names='timepoint_of_the_day', title='Population of European continent')
-    st.plotly_chart(fig_2)
+    # fig_2 = px.pie(listening_group, values='actual_duation', names='timepoint_of_the_day', title='Population of European continent')
+    # st.plotly_chart(fig_2)
 
-    fig_3 = px.pie(listening_group, values='userID', names='timepoint_of_the_day', title='Population of European continent')
-    st.plotly_chart(fig_3)
+    # fig_3 = px.pie(listening_group, values='userID', names='timepoint_of_the_day', title='Population of European continent')
+    # st.plotly_chart(fig_3)
 
 
     #retro
