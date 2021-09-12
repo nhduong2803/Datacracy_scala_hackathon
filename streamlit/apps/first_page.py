@@ -22,19 +22,19 @@ import plotly.express as px
 
 st.set_page_config(layout="wide")
 # Load data
-text = open("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/bundle_new_paid.csv", "r")
+text = open("Datacracy_scala_hackathon/data/bundle_new_paid.csv", "r")
 text = ''.join([i for i in text]).replace("[", "AAA")
 x = open("output.csv","w")
 x.writelines(text)
 x.close()
-contribution_cluster = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/contribution_paid_cluster.csv", sep = ",")
-bundle_new_paid = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/bundle_new_paid.csv", sep = ",")
+contribution_cluster = pd.read_csv("data/contribution_paid_cluster.csv", sep = ",")
+bundle_new_paid = pd.read_csv("data/bundle_new_paid.csv", sep = ",")
 bundle_new_paid = bundle_new_paid[["consequents", "antecedents","lift"]].replace("[","").replace("'","")
-bundle_potential = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/bundle_potential_user.csv", sep = ",")
+bundle_potential = pd.read_csv("data/bundle_potential_user.csv", sep = ",")
 bundle_potential = bundle_potential[["consequents", "antecedents","lift"]]
-bundle_loyal = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/bundle_loyal_users.csv", sep = ",")
+bundle_loyal = pd.read_csv("data/bundle_loyal_users.csv", sep = ",")
 bundle_loyal = bundle_loyal[["consequents", "antecedents","lift"]]
-listening_group = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/listening_group.csv", sep = ",")
+listening_group = pd.read_csv("data/listening_group.csv", sep = ",")
 # Text describe
 
 def main():
@@ -127,6 +127,7 @@ def main():
     col2.write(contribution_cluster)
     st.markdown(bundle_introduction, True)
 
+
     col1, col2= st.beta_columns((1,5))
     # expand_bundle = st.expander()
     # expand_bundle.write("Bundle information on high value users")
@@ -149,10 +150,16 @@ def main():
 
     
     # st.write(case_study)
-    st.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/case_study.png')
+    st.image('Datacracy_scala_hackathon/image/case_study.png')
     # st.markdown(overview_2, True)
-    fig = px.bar(listening_group, x="by_week", y="actual_duation", title="Long-Form Input")
-    fig.show()
+    fig_1 = px.bar(listening_group, x="", y="sub_cat", color = "timepoint_of_the_day", title="Long-Form Input")
+    st.plotly_chart(fig_1)
+
+    fig_2 = px.pie(listening_group, values='actual_duation', names='timepoint_of_the_day', title='Population of European continent')
+    st.plotly_chart(fig_2)
+
+    fig_3 = px.pie(listening_group, values='userID', names='timepoint_of_the_day', title='Population of European continent')
+    st.plotly_chart(fig_3)
 
 
     #retro
