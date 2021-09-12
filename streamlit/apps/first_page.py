@@ -121,7 +121,7 @@ def main():
     st.markdown(bundle_introduction, True)
 
 
-    col1, col2= st.beta_columns((1,5))
+    col1, col2= st.columns((1,5))
     # expand_bundle = st.expander()
     # expand_bundle.write("Bundle information on high value users")
     # with expand_bundle:
@@ -137,8 +137,8 @@ def main():
         st.write(bundle_potential)
 
     # Use case
+    a1, a2, a3= st.columns((2,8,2))
     st.markdown(h3,unsafe_allow_html=True)
-    a1, a2, a3= st.beta_columns((2,8,2))
     a2.markdown(user_case, True)
 
     
@@ -148,11 +148,11 @@ def main():
     <p style="line-height: 1.5;"><span style="font-family: Georgia, serif; font-size: 15px;"><strong>Usercase 02</strong>: Về yếu tố nghe tr&ecirc;n mỗi khung thời gian, t&iacute;nh về tổng quan tuy c&oacute; sự thay đổi kh&ocirc;ng nhiều nhưng nếu t&iacute;nh tr&ecirc;n từng category th&igrave; h&agrave;nh vi của người nghe c&oacute; sự kh&aacute;c nhau nhất định.</span></p>
     """
     st.markdown(duration_explain, True)
-    col1, col2 = st.beta_columns((1,1))
+    col1, col2 = st.columns((1,1))
     col1.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/image_1.png')
     col2.image("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/image_2.png")
     
-    a1, a2 = st.beta_columns((1,1))
+    a1, a2 = st.columns((1,1))
     a = listening_group[listening_group["sub_cat"]== "Tâm linh"]
     b=a.groupby(["timepoint_of_the_day"]).agg({"actual_duation":'sum', "userID":'count'}).reset_index()
     a1.text("Sub-cat: Hệ tâm linh")
