@@ -17,6 +17,7 @@ scaler = MinMaxScaler()
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
 import SessionState
+import plotly.express as px
 
 
 st.set_page_config(layout="wide")
@@ -33,6 +34,7 @@ bundle_potential = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hac
 bundle_potential = bundle_potential[["consequents", "antecedents","lift"]]
 bundle_loyal = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/bundle_loyal_users.csv", sep = ",")
 bundle_loyal = bundle_loyal[["consequents", "antecedents","lift"]]
+listening_group = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/listening_group.csv", sep = ",")
 # Text describe
 
 def main():
@@ -144,10 +146,13 @@ def main():
     # Use case
     st.markdown(h3,unsafe_allow_html=True)
     st.markdown(user_case, True)
+
     
     # st.write(case_study)
     st.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/case_study.png')
     # st.markdown(overview_2, True)
+    fig = px.bar(listening_group, x="by_week", y="actual_duation", title="Long-Form Input")
+    fig.show()
 
 
     #retro
