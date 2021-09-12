@@ -43,13 +43,15 @@ def main():
     """
 
     overview = """
-    <p style="line-height: 0.15;"><br></p>
-<p>
-    <style type="text/css">
-        <!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}
-        -->
-    </style><span data-sheets-hyperlinkruns='{"1":103,"2":"https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit"}{"1":187}' data-sheets-textstyleruns='{"1":0}{"1":103,"2":{"2":{"1":2,"2":1136076},"9":1}}' data-sheets-userformat='{"2":1049089,"3":{"1":0},"12":0,"23":1}' data-sheets-value='{"1":2,"2":"Voizfm là nền tảng nghe Sách nói và Podcast chất lượng cao, 100% Bản quyền lớn nhất Việt Nam.\nYêu cầu: https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit"}' style="font-size:12pt;font-family:Calibri,Arial;font-style:normal;"><span style="font-size:12pt;font-family:Calibri,Arial;font-style:normal;">Voizfm l&agrave; nền tảng nghe S&aacute;ch n&oacute;i v&agrave; Podcast chất lượng cao, 100% Bản quyền lớn nhất Việt Nam.<br>Y&ecirc;u cầu:&nbsp;</span><span style="font-size:12pt;font-family:Calibri,Arial;font-style:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;"><a class="in-cell-link" href="https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit" target="_blank">https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit</a></span></span>
-</p>
+    <p style="line-height: 1.5; text-align: justify;"><span style="color: rgb(0, 0, 0); font-family: Georgia, serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">Voizfm l&agrave; nền tảng nghe S&aacute;ch n&oacute;i v&agrave; Podcast chất lượng cao, 100% Bản quyền lớn nhất Việt Nam.&nbsp;</span></p>
+<p style="line-height: 1.5; text-align: justify;"><span style="font-family: Georgia, serif;"><span style="color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">Case study:</span><a class="waffle-rich-text-link" href="https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit" style="text-decoration: none; color: rgb(0, 0, 0); font-family: docs-Calibri; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-skip-ink: none;">&nbsp;</a><a class="waffle-rich-text-link" href="https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit" style="text-decoration: underline; color: rgb(17, 85, 204); font-family: docs-Calibri; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-skip-ink: none;">https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edi</a><span style="font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: underline; color: rgb(17, 85, 204); text-decoration-skip-ink: none;">t</span><span style="color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">&nbsp;</span></span></p>
+<p style="line-height: 1.5; text-align: justify;"><span style="font-family: Georgia, serif;"><span style="color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">Dựa tr&ecirc;n nhu cầu của Voizfm, nh&oacute;m thực hiện nghi&ecirc;n cứu v&agrave; triển khai b&agrave;i to&aacute;n sau:&nbsp;</span></span></p>
+<p style="line-height: 1.5; text-align: justify;"><span style="font-family: Georgia, serif;"><span style="color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">1. &nbsp; &nbsp; &nbsp; &nbsp;Journey of Content Consumption: Tập trung v&agrave;o nh&oacute;m high-value users, ph&acirc;n t&iacute;ch tương t&aacute;c giữa User v&agrave; Contents (Playlist, Category) trong bộ Data của Voizfm&nbsp;</span></span></p>
+<p style="line-height: 1.5; text-align: justify;"><span style="color: rgb(0, 0, 0); font-family: Georgia, serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; text-decoration-skip-ink: none;">2. &nbsp; &nbsp; &nbsp; &nbsp;Use Cases: Cluster users theo khẩu vị &ldquo;nghe&quot;</span></p>
+    """
+
+    user_case ="""
+    <p style="line-height: 1.5; text-align: justify;">Sau bước EDA, nh&oacute;m đ&atilde; liệt k&ecirc; ra được 4 user case kh&aacute;c nhau để chứng minh cho giả thiế của m&igrave;nh cụ thể như sau:</p>
     """
 
     #Title list
@@ -60,7 +62,7 @@ def main():
     """
     h2=  """
     <div style="background-color:#004d99;padding:0px">
-    <h2 style="color:white;text-align:center;">DATA OVERVIEW </h2>
+    <h2 style="color:white;text-align:center;">USE CASE</h2>
     </div>
     """
     h3=  """
@@ -83,11 +85,16 @@ def main():
     st.markdown(member, True)
     st.markdown(h1,unsafe_allow_html=True)
     st.markdown(overview, True)
-    col1, col2 = st.beta_columns((1,1))
-    st.text("requirement")
-    checkbox = make_recording_widget(st.checkbox("hello"))
+    # col1, col2 = st.beta_columns((1,1))
+    # st.text("requirement")
+    # checkbox = make_recording_widget(st.checkbox("hello"))
 
-    # col2.image('image/analysis_flow.png')
+    # Use case
+    st.markdown(h2,unsafe_allow_html=True)
+    st.markdown(user_case, True)
+    # case_study = pd.read_csv("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/user_case.csv", sep = ",")
+    # st.write(case_study)
+    st.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/case_study.png')
     # st.markdown(overview_2, True)
 
 state = SessionState.get(position=0)
