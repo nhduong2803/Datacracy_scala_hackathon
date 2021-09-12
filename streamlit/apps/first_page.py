@@ -37,14 +37,11 @@ def main():
     st.title("SCALA - HACKATHON - Team 03")
     #Introduce team members
     member = """
-<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.5;'><span style="font-family: Georgia, serif; font-size: 15px;">Nh&oacute;m gồm 5 th&agrave;nh vi&ecirc;n:</span></p>
-<ul style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;'>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-size: 15px;"><span style="font-family: Georgia, serif;">Dương Thị Như Hải</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-size: 15px;"><span style="font-family: Georgia, serif;">L&ecirc; Thu Thảo</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-size: 15px;"><span style="font-family: Georgia, serif;">Nguyễn Trần Qu&acirc;n</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-size: 15px;"><span style="font-family: Georgia, serif;">Vũ Thị Bảo Ngọc</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Georgia, serif; font-size: 15px;">Đới Thị Hồng</span></li>
-</ul>
+<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.15; text-align: justify;'><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Georgia, serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">Voizfm l&agrave; nền tảng nghe S&aacute;ch n&oacute;i v&agrave; Podcast chất lượng cao, 100% Bản quyền lớn nhất Việt Nam.&nbsp;</span></p>
+<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.15; text-align: justify;'><span style="box-sizing: border-box; font-family: Georgia, serif;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">Case study:</span><a class="waffle-rich-text-link" href="https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit" style="box-sizing: border-box; color: rgb(0, 0, 0); text-decoration-line: underline; text-decoration: none; font-family: docs-Calibri; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&nbsp;</a><a class="waffle-rich-text-link" href="https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edit" style="box-sizing: border-box; color: rgb(17, 85, 204); text-decoration-line: underline; text-decoration: underline; font-family: docs-Calibri; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">https://docs.google.com/document/d/1wQgf5Vmhp1nEYmtdoYJhQx93S1nQg0C6NyzIjCfEq7I/edi</a><span style="box-sizing: border-box; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: underline; color: rgb(17, 85, 204);">t</span><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;</span></span></p>
+<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.15; text-align: justify;'><span style="box-sizing: border-box; font-family: Georgia, serif;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">Dựa tr&ecirc;n nhu cầu của Voizfm, nh&oacute;m thực hiện nghi&ecirc;n cứu v&agrave; triển khai b&agrave;i to&aacute;n sau:&nbsp;</span></span></p>
+<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.15; text-align: justify;'><span style="box-sizing: border-box; font-family: Georgia, serif;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">1. &nbsp; &nbsp; &nbsp; &nbsp;Journey of Content Consumption: Tập trung v&agrave;o nh&oacute;m high-value users, ph&acirc;n t&iacute;ch tương t&aacute;c giữa User v&agrave; Contents (Playlist, Category) trong bộ Data của Voizfm&nbsp;</span></span></p>
+<p style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; line-height: 1.15; text-align: justify;'><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Georgia, serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">2. &nbsp; &nbsp; &nbsp; &nbsp;Use Cases: Cluster users theo khẩu vị &ldquo;nghe&quot;</span></p>
     """
 
     overview = """
@@ -118,9 +115,9 @@ def main():
     # consumption
     st.markdown(h2,unsafe_allow_html=True)
     st.markdown(consumption, True)
-    col1, col2, col3= st.beta_columns((1,4,1))
+    # col1, col2, col3= st.beta_columns((1,4,1))
     # a = contribution_cluster.style.applymap(color_high_value)
-    col2.write(contribution_cluster)
+    st.write(contribution_cluster)
     st.markdown(bundle_introduction, True)
 
 
@@ -131,31 +128,45 @@ def main():
     #     clicked = st.button("Clieck me")
     info_selectbox = col1.selectbox("Segment",("Loyal users", "New paid", "Potential users"))
     if info_selectbox == "Loyal users":
-        a1, a2, a3= st.beta_columns((1,10,1))
-        a2.write(bundle_loyal)
+        st.write(bundle_loyal)
     if info_selectbox == "New paid":
-        a1, a2, a3= st.beta_columns((1,10,1))
-        a2.write(bundle_new_paid)
+        # a1, a2, a3= st.beta_columns((1,10,1))
+        st.write(bundle_new_paid)
     if info_selectbox == "Potential users":
-        a1, a2, a3= st.beta_columns((1,10,1))
-        a2.write(bundle_potential)
+        # a1, a2, a3= st.beta_columns((1,10,1))
+        st.write(bundle_potential)
 
     # Use case
     st.markdown(h3,unsafe_allow_html=True)
-    st.markdown(user_case, True)
+    a1, a2, a3= st.beta_columns((2,8,2))
+    a2.markdown(user_case, True)
 
     
     # st.write(case_study)
     st.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/case_study.png')
-    # st.markdown(overview_2, True)
-    # fig_1 = px.bar(listening_group, x="sub_cat", y="actual_duration", color = "timepoint_of_the_day", title="Long-Form Input")
-    # st.plotly_chart(fig_1)
+    duration_explain = """
+    <p style="line-height: 1.5;"><span style="font-family: Georgia, serif; font-size: 15px;"><strong>Usercase 02</strong>: Về yếu tố nghe tr&ecirc;n mỗi khung thời gian, t&iacute;nh về tổng quan tuy c&oacute; sự thay đổi kh&ocirc;ng nhiều nhưng nếu t&iacute;nh tr&ecirc;n từng category th&igrave; h&agrave;nh vi của người nghe c&oacute; sự kh&aacute;c nhau nhất định.</span></p>
+    """
+    st.markdown(duration_explain, True)
+    col1, col2 = st.beta_columns((1,1))
+    col1.image('/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/image_1.png')
+    col2.image("/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/image/image_2.png")
+    
+    a1, a2 = st.beta_columns((1,1))
+    a = listening_group[listening_group["sub_cat"]== "Tâm linh"]
+    b=a.groupby(["timepoint_of_the_day"]).agg({"actual_duation":'sum', "userID":'count'}).reset_index()
+    a1.text("Sub-cat: Hệ tâm linh")
+    a1.write(b)
 
-    fig_2 = px.pie(listening_group, values='actual_duation', names='timepoint_of_the_day', title='Population of European continent')
-    st.plotly_chart(fig_2)
+    c = listening_group[listening_group["sub_cat"]== "Sách tóm tắt"]
+    d=c.groupby(["timepoint_of_the_day"]).agg({"actual_duation":'sum', "userID":'count'}).reset_index()
+    a2.text("Sub-cat: Sách tóm tắt")
+    a2.write(d)
 
-    # fig_3 = px.pie(listening_group, values='userID', names='timepoint_of_the_day', title='Population of European continent')
-    # st.plotly_chart(fig_3)
+    explain = """
+    <p style="line-height: 1.5;"><span style="font-family: Georgia, serif; font-size: 15px;">Kết luận: Ở 2 bảng tr&ecirc;n, Voiz c&oacute; thể c&acirc;n nhắc c&aacute;c ch&iacute;nh s&aacute;ch promote một thể loại s&aacute;ch cụ thể v&agrave;o khung giờ th&iacute;ch hợp tr&ecirc;n banner, tuỳ v&agrave;o định hướng ph&aacute;t triển của Voiz hoặc tuỳ v&agrave;o ch&iacute;nh s&aacute;ch kết hợp với t&aacute;c giả/ nh&agrave; xuất bản.</span></p>
+    """
+    st.markdown(explain, unsafe_allow_html=True)
 
 
     #retro
@@ -163,21 +174,6 @@ def main():
     st.markdown(summary, True)
 
 
-state = SessionState.get(position=0)
 
 if __name__=='__main__':
     Res=main()
-    # Res=str(int(result))
-    # dict={"yes":'1',"no":'0'}    
-    # for i,j in dict.items():
-    #     Res=Res.replace(j,i)
-    
-            
-    if st.sidebar.button("Show Prediction"):
-        st.sidebar.subheader("The predicted response of customer or client to subscribe a term deposit is")
-        st.sidebar.success(Res)
-    
-    
-    if st.button("Thanks") :
-        st.text("Thank you for visiting  and happy learning :)")
-        st.balloons()
