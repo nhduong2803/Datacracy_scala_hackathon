@@ -105,7 +105,7 @@ def main():
         color = 'red' if int(val) < 0 else 'black'
         return 'color: %s' % color
     # PROJECT OVERVIEW INFORMATION
-    st.markdown(member, True)
+    # st.markdown(member, True)
     st.markdown(h1,unsafe_allow_html=True)
     st.markdown(overview, True)
     # col1, col2 = st.beta_columns((1,1))
@@ -162,11 +162,100 @@ def main():
     d=c.groupby(["timepoint_of_the_day"]).agg({"actual_duation":'sum', "userID":'count'}).reset_index()
     a2.text("Sub-cat: Sách tóm tắt")
     a2.write(d)
-
     explain = """
     <p style="line-height: 1.5;"><span style="font-family: Georgia, serif; font-size: 15px;">Kết luận: Ở 2 bảng tr&ecirc;n, Voiz c&oacute; thể c&acirc;n nhắc c&aacute;c ch&iacute;nh s&aacute;ch promote một thể loại s&aacute;ch cụ thể v&agrave;o khung giờ th&iacute;ch hợp tr&ecirc;n banner, tuỳ v&agrave;o định hướng ph&aacute;t triển của Voiz hoặc tuỳ v&agrave;o ch&iacute;nh s&aacute;ch kết hợp với t&aacute;c giả/ nh&agrave; xuất bản.</span></p>
     """
     st.markdown(explain, unsafe_allow_html=True)
+
+    # XXX
+    title_usecase2 = """
+    <p><strong>User case 03</strong>: Recommend playlist s&aacute;ch y&ecirc;u th&iacute;ch theo category</p>
+    """
+    st.markdown(title_usecase2,unsafe_allow_html=True)
+    cat_recommned=pd.read_csv(r"/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/cat_recommned.csv")
+    cat_recommned.by_week = pd.to_datetime(cat_recommned['by_week'], format='%Y-%m-%d')
+    cat_recommned['week'] = cat_recommned.by_week.dt.week
+    cat_recommned['month'] = cat_recommned.by_week.dt.month
+    book_cat = st.selectbox('Book Category ', ('Sách nói', 'Sách tóm tắt', 'Truyện nói', 'Podcast', 'Thiếu nhi'))
+    #require variable
+    if book_cat  == 'Sách nói':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)]\
+            .sort_values(by = ['avg_actual','actual_duation','playlistID','playlist_name'], ascending = False)\
+
+        week = week.groupby(['cat','sub_cat','playlist_name']).agg({
+            'avg_actual':'sum',
+            'actual_duation': 'sum',
+            'playlistID': 'sum'
+        }).reset_index().sort_values(by = ['avg_actual','actual_duation','playlistID'], ascending = False)
+
+        st.dataframe(week[['cat','sub_cat','playlist_name']].head(10))
+
+    elif book_cat == 'Sách tóm tắt':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    elif book_cat == 'Truyện nói':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    elif book_cat == 'Podcast':
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+    else :
+        week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)] \
+                .sort_values(by=['avg_actual', 'actual_duation', 'playlistID', 'playlist_name'], ascending=False) \
+
+        week = week.groupby(['cat', 'sub_cat', 'playlist_name']).agg({
+
+            'avg_actual': 'sum',
+
+            'actual_duation': 'sum',
+
+            'playlistID': 'sum'
+
+        }).reset_index().sort_values(by=['avg_actual', 'actual_duation', 'playlistID'], ascending=False)
+
+        st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
+
+
+    
 
 
     #retro

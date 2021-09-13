@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
 
 
-cat_recommned=pd.read_csv(r"/home/quannt/Documents/GitHub/Datacracy_scala_hackathon/data/cat_recommned.csv")
+cat_recommned=pd.read_csv(r"/Users/hato/Documents/GitHub/Datacracy_scala_hackathon/data/cat_recommned.csv")
 cat_recommned.by_week = pd.to_datetime(cat_recommned['by_week'], format='%Y-%m-%d')
 cat_recommned['week'] = cat_recommned.by_week.dt.week
 cat_recommned['month'] = cat_recommned.by_week.dt.month
@@ -32,16 +32,9 @@ def main():
     st.markdown(htk,unsafe_allow_html=True)
 
 ### demo add variables
-    #st.sidebar.header("Book Category")
 
     # scale varible
     book_cat = st.selectbox('Book Category ', ('Sách nói', 'Sách tóm tắt', 'Truyện nói', 'Podcast', 'Thiếu nhi'))
-
-
-    # caterigorical variable
-    # job=st.selectbox("Enter the type of job customer do",( <field note> ))
-    # job=int(encoder.fit_transform([[job]]))
-
     #require variable
     if book_cat  == 'Sách nói':
         week = cat_recommned[(cat_recommned.week == cat_recommned.week.max()) & (cat_recommned.cat == book_cat)]\
@@ -119,24 +112,6 @@ def main():
 
         st.dataframe(week[['cat', 'sub_cat', 'playlist_name']].head(10))
 
-    #fix variable
-
-    # show result
-
-    # if marital!="select" and education!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select" and day_of_week!="select" and poutcome!="select":
-        ### marital=int(encoder.fit_transform([[marital]]))
-
-    #     with open("D:\\random_model.pkl",'rb') as f:
-    #         rf=pickle.load(f)
-    #     res=rf.predict([[age,job]])
-    #     res=str(res)
-    #     dict={"yes":'1',"no":'0'}    
-    #     for i,j in dict.items():
-    #         res=res.replace(j,i)
-    # else:
-    #     res="None"
-
-
 
 if __name__=='__main__':
     Res=main()
@@ -149,4 +124,3 @@ if __name__=='__main__':
     #     st.sidebar.subheader("The predicted response of customer or client to subscribe a term deposit is")
     #     st.sidebar.success(Res)
     # test abc
-    
